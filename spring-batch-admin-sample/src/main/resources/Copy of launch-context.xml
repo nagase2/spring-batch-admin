@@ -7,7 +7,7 @@
 	  A convenient aggregating config file for running the jobs in this project
       from the command line instead of from the web application.  E.g.
 	  
-	  $ MAVEN_OPTS="-Dbatch.jdbc.url=jdbc:postgresql://localhost/spbatch -Dbatch.data.source.init=false" \
+	  $ MAVEN_OPTS="-Dbatch.jdbc.url=jdbc:hsqldb:hsql://localhost:9005/samples -Dbatch.data.source.init=false" \
         mvn exec:java -Dexec.classpathScope=runtime \
         -Dexec.mainClass=org.springframework.batch.core.launch.support.CommandLineJobRunner \
         -Dexec.args="classpath:launch-context.xml job1 fail=false run.id=1"
